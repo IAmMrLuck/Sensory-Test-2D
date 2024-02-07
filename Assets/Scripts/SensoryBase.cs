@@ -7,7 +7,6 @@ public class SensoryBase : MonoBehaviour
     [SerializeField] private GameObject circlePrefab;
     [SerializeField] private float growthTime = 1.0f;
 
-
     private IEnumerator GrowCircle(GameObject circleInstance, int targetScale)
     {
         float elapsedTime = 0f;
@@ -20,7 +19,6 @@ public class SensoryBase : MonoBehaviour
             elapsedTime += Time.deltaTime;
             yield return null;
         }
-
         circleInstance.transform.localScale = scaleSize; 
     }
 
